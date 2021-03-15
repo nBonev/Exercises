@@ -1,0 +1,21 @@
+function volleyball(arg1, arg2, arg3) {
+    let yearType = arg1;
+    let countyearHoliday = Number(arg2);
+    let countweekendTravel = Number(arg3);
+
+    let yearWeekend = 48;
+    let sofiaWeekends = yearWeekend - countweekendTravel;
+    let sofiaPlaying = sofiaWeekends * 3 / 4;
+    let holidayPlaying = countyearHoliday * 2 / 3;
+    let travelPlaying = countweekendTravel * 1;
+
+    let totalPlaying = sofiaPlaying + holidayPlaying + travelPlaying;
+
+    if(yearType === "leap"){
+        console.log(Math.floor(totalPlaying * 1.15));
+
+    }else if(yearType === "normal"){
+        console.log(Math.floor(totalPlaying));
+    }
+
+}

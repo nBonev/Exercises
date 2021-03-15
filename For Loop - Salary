@@ -1,0 +1,21 @@
+function salary(input) {
+    let text = input;
+    let charge = 0;
+    let tabs = Number(input[0]);
+    let salary = Number(input[1]);
+    for(let i = 2; i < text.length; i++){
+        let word = text[i];
+        if(word === "Facebook"){
+            charge += 150;
+        }else if(word === "Instagram"){
+            charge += 100;
+        }else if(word === "Reddit"){
+            charge += 50;
+        }
+    }
+    if(charge >= salary){
+        console.log(`You have lost your salary.`);
+    }else{
+        console.log(`${salary - charge}`);
+    }
+}

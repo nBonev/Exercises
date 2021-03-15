@@ -1,0 +1,21 @@
+function cake(input) {
+    let w = Number(input.shift());
+    let i = Number(input.shift());
+    let cake = w * i;
+    let pieces = 0;
+    let command = input.shift();
+
+    while(command !== 'STOP'){
+        pieces += Number(command);
+        if(pieces > cake){
+            break;
+        }
+        command = input.shift();
+    }
+    if(pieces > cake){
+        console.log(`No more cake left! You need ${pieces - cake} pieces more.`);
+    }else{
+        console.log(`${cake - pieces} pieces are left.`);
+    }
+
+}
